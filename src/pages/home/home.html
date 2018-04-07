@@ -1,0 +1,20 @@
+<agm-map [latitude]="lat" [longitude]="lng">
+
+  <agm-marker [latitude]="lat" [longitude]="lng">
+
+    <agm-info-window>
+      <h3>Hello b*tches</h3>
+      <p>hi wassup</p>
+    </agm-info-window>
+
+  </agm-marker>
+
+  <agm-marker *ngFor="let marker of markers" [latitude]="marker.location[0]" [longitude]="marker.location[1]">
+
+    <agm-info-window>
+      <h1> {{marker.distance}} from here</h1>
+    </agm-info-window>
+
+  </agm-marker>
+
+</agm-map>
